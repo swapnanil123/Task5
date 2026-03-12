@@ -57,7 +57,6 @@ nav {
   color: #29a6ff;
 }
 
-
 .user-section {
   display: inline-block;
   width: 20vw;
@@ -73,7 +72,6 @@ nav {
   color: #29a6ff;
   font-weight: 600;
   font-size: 0.9vw;
-
 }
 
 .hero-section {
@@ -102,37 +100,37 @@ nav {
   transform: translateY(-50%);
 }
 
-.left-view> .left-view-content > h1 {
+.left-view > .left-view-content > h1 {
   font-size: 48px;
   color: #555f69;
   margin-bottom: 10px;
   line-height: 65px;
 }
 
-.left-view> .left-view-content > h2 {
+.left-view > .left-view-content > h2 {
   font-size: 40px;
   color: #29a6ff;
   margin-bottom: 10px;
 }
 
-.left-view> .left-view-content > p {
+.left-view > .left-view-content > p {
   color: #96a0aa;
   line-height: 1.7;
   margin-bottom: 20px;
   width: 80%;
 }
 
-.left-view> .left-view-content > button {
+.left-view > .left-view-content > button {
   padding: 20px 60px;
   border: none;
   background: linear-gradient(90deg, #3daaf8, #40b4ff);
   color: white;
   font-size: 16px;
-  border-radius: 0.7vw;
+  border-radius:  20px;
   cursor: pointer;
 }
 
-.left-view> .left-view-content > button:hover {
+.left-view > .left-view-content > button:hover {
   opacity: 0.9;
 }
 
@@ -149,4 +147,154 @@ nav {
   width: 35vw;
   height: auto;
   transform: scaleX(-1);
+}
+
+/* media quary for width <= 1024px or max-width: 1024px */
+/* @media (width <= 1024px) {
+  
+} */
+@media (max-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+  .menu {
+    font-size: 12px;
+  }
+  .right-view {
+    position: relative;
+    width: 50vw;
+    height: 100%;
+    text-align: center;
+  }
+
+  .right-view img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(-1);
+    width: 55vw;
+    height: auto;
+  }
+}
+
+/* for tablet */
+/* media quary for width <= 768px or max-width: 768px */
+/* @media (width <= 768px) {
+  
+} */
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+  }
+  .user-wrapper {
+    font-size: 12px;
+  }
+  .menu {
+    font-size: 12px;
+  }
+  .left-view > .left-view-content > h1 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+
+  .left-view > .left-view-content > h2 {
+    font-size: 30px;
+  }
+
+  .left-view > .left-view-content > p {
+    line-height: 1.5;
+  }
+
+  .left-view > .left-view-content > button {
+    padding: 20px 60px;
+    font-size: 14px;
+  }
+  .right-view {
+    position: relative;
+    width: 50vw;
+    height: 100%;
+    text-align: center;
+  }
+
+  .right-view img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(-1);
+    width: 45vw;
+    height: auto;
+  }
+}
+
+/* for Mobile */
+/* media quary for width <= 480px or max-width: 480px */
+/* @media (width <= 480px) {
+  
+} */
+@media (max-width: 480px) {
+  nav {
+    /* display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 10px;  */
+    padding: 0 20px;
+  }
+  .menu {
+    display: none;
+  }
+  .user-section {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: auto;
+    padding-right: 20px;
+  }
+  .user-wrapper {
+    font-size: 14px; 
+    padding: 8px 15px; 
+    border-radius: 10px;
+  }
+  .menu {
+    display: none;
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-view {
+    padding: 0;
+    margin-top: 50px;
+  }
+  .left-view > .left-view-content{
+    /* width: 100%; */text-align: left;
+  }
+  .left-view, .right-view  {
+    width: 100%;
+  }
+  .left-view > .left-view-content > h1 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+
+  .left-view > .left-view-content > h2 {
+    font-size: 30px;
+  }
+
+  .left-view > .left-view-content > p {
+    line-height: 1.5;
+  }
+
+  .left-view > .left-view-content > button {
+    padding: 20px 60px;
+    font-size: 14px;
+  }
+
+  .right-view img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(-1);
+    width: 85vw;
+    height: auto;
+  }
 }

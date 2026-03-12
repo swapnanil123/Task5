@@ -54,32 +54,32 @@ nav {
 }
 .hamburger-container {
   display: none;
-  flex-direction: column; /* Stacks the lines vertically */
+  flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 21px; /* Total height of the icon */
+  height: 21px;
   cursor: pointer;
   margin-left: 15px;
 }
 
 .line {
   width: 100%;
-  height: 3px; /* Thickness of each line */
-  background-color: #333; /* Use your --logo-color variable here! */
+  height: 3px;
+  background-color: #333;
   border-radius: 5px;
-  transition: 0.3s; /* Makes hover effects smooth */
+  transition: 0.3s;
 }
-.toggler-checkbox {
-  display: none;
-}
-.toggler-checkbox:checked ~ .sidebar {
-  transform: translateX(0)
+.hamburger-container:focus ~ .sidebar,
+.sidebar:focus-within {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out;
 }
 .close-btn {
   position: absolute;
   color: white;
   font-size: 30px;
-  align-self: flex-start; /* Puts it in the top right corner */
+  align-self: flex-start;
   padding: 20px;
   cursor: pointer;
 }
@@ -152,16 +152,17 @@ nav {
   margin-left: -40px;
 }
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
   width: 60vw;
   background-color: #333;
   z-index: 4;
-  display: flex;
+  display: none;
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
+  outline: none;
 }
 .sidebar-menu {
   color: #fff;

@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  /* border: 1px solid black; */
+}
+
+.logo-section,
+ul,
+.user-section {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+}
+
+.logo-section,
+.user-section {
+  position: absolute;
+  width: 10%;
+  line-height: 80px;
+}
+
+.logo-section {
+  left: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+}
+
+.user-section {
+  right: 0;
+  font-size: 14px;
+  color: rgb(41, 166, 255);
+  font-weight: 600;
+}
+.user-wrapper {
+  display: inline-block;
+  padding: 15px 16px;
+  background-color: rgb(222, 241, 255);
+  border-radius: 10px;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+nav > ul {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  /* border: 1px solid black; */
+  line-height: 80px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(194, 194, 194);
+}
+
+nav > ul > li {
+  display: inline;
+  margin: 0 15px;
+  cursor: pointer;
+}
+nav > ul > li > a{
+  text-decoration: none;
+  color: rgb(194, 194, 194)
+}
+nav > ul > li > a:hover {
+  color: rgb(41, 166, 255);
+  transition: 0.5s all;
+}
+
+.hero-section {
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  width: 100%;
+  /* border: 1px solid black; */
+  background-color: rgb(250, 250, 250);
+  font-size: 0;
+}
+.left-view,
+.right-view{
+  /* border: 2px solid black; */
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 100%;
+  padding: 60px;
+  font-size: 16px;
+}
+.left-view{
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 100%;
+  padding: 120px 120px;
+  font-size: 16px;
+}
+
+.left-view h1{
+  font-size: 44px;
+  color: rgb(85,95,105);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.left-view h2{
+  font-size: 44px;
+  color: rgb(41,166,255);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.left-view p{
+  color: rgb(150,160,170);
+  line-height: 1.7;
+  margin-bottom: 35px;
+  width: 90%;
+}
+
+.left-view button{
+  padding: 16px 30px;
+  background: linear-gradient(90deg, rgb(61, 170, 248), rgb(64,180,255));
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.left-view button:hover{
+  opacity: 0.9;
+}
+
+.right-view{
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 100%;
+  padding: 40px;
+  text-align: left;
+}
+
+.hero-image{
+  max-width: 80%;
+  height: auto;
+  transform: scaleX(-1);
+}

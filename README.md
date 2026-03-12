@@ -7,14 +7,6 @@ https://task5-three-beta.vercel.app/
 
 
 
-
-
-
-
-
-
-
-
 /* media quary for width <= 1024px or max-width: 1024px */
 /* @media (width <= 1024px) {
   

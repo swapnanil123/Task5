@@ -168,23 +168,30 @@ nav {
     font-size: 12px;
     padding: 8px 15px;
   }
-  .left-view > .left-view-content > h1 {
-    font-size: 38px;
-    line-height: 50px;
+  .hero-section {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center; /* center horizontally */
+    justify-content: flex-start; /* optional: top align */
   }
 
-  .left-view > .left-view-content > h2 {
-    font-size: 30px;
+  .left-view,
+  .right-view {
+    width: 90vw; /* almost full width on mobile */
+    padding: 20px; /* some spacing inside */
+    display: block; /* make sure it’s block level */
+    text-align: center; /* center content */
   }
 
-  .left-view > .left-view-content > p {
-    line-height: 1.7;
+  .left-view > .left-view-content {
+    position: static; /* remove absolute positioning */
+    transform: none; /* remove translateY */
+    margin-bottom: 20px; /* spacing between left and right */
   }
-  .left-view > .left-view-content > button {
-    font-size: 14px;
-  }
+
   .right-view img {
-    width: 55vw;
+    width: 100%; /* full width of its container */
+    transform: scaleX(-1);
   }
 }
 

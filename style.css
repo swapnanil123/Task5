@@ -57,7 +57,6 @@ nav {
   color: #29a6ff;
 }
 
-
 .user-section {
   display: inline-block;
   width: 20vw;
@@ -73,7 +72,6 @@ nav {
   color: #29a6ff;
   font-weight: 600;
   font-size: 0.9vw;
-
 }
 
 .hero-section {
@@ -82,7 +80,6 @@ nav {
   width: 100vw;
   background: #fafafa;
   font-size: 0;
-  /* border: 2px solid black; */
 }
 
 .left-view {
@@ -92,7 +89,6 @@ nav {
   height: 100%;
   padding: 0 80px;
   font-size: 16px;
-  /* border: 1px solid black; */
 }
 
 .left-view-content {
@@ -102,27 +98,27 @@ nav {
   transform: translateY(-50%);
 }
 
-.left-view> .left-view-content > h1 {
+.left-view > .left-view-content > h1 {
   font-size: 48px;
   color: #555f69;
   margin-bottom: 10px;
   line-height: 65px;
 }
 
-.left-view> .left-view-content > h2 {
+.left-view > .left-view-content > h2 {
   font-size: 40px;
   color: #29a6ff;
   margin-bottom: 10px;
 }
 
-.left-view> .left-view-content > p {
+.left-view > .left-view-content > p {
   color: #96a0aa;
   line-height: 1.7;
   margin-bottom: 20px;
   width: 80%;
 }
 
-.left-view> .left-view-content > button {
+.left-view > .left-view-content > button {
   padding: 20px 60px;
   border: none;
   background: linear-gradient(90deg, #3daaf8, #40b4ff);
@@ -132,7 +128,7 @@ nav {
   cursor: pointer;
 }
 
-.left-view> .left-view-content > button:hover {
+.left-view > .left-view-content > button:hover {
   opacity: 0.9;
 }
 
@@ -149,4 +145,69 @@ nav {
   width: 35vw;
   height: auto;
   transform: scaleX(-1);
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 10vh;
+  }
+  .menu {
+    display: none;
+  }
+
+  .user-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-wrapper {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+  .left-view > .left-view-content > h1 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+
+  .left-view > .left-view-content > h2 {
+    font-size: 30px;
+  }
+
+  .left-view > .left-view-content > p {
+    line-height: 1.7;
+  }
+  .left-view > .left-view-content > button {
+    font-size: 14px;
+  }
+  .right-view img {
+    width: 55vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    font-size: 14px;
+  }
+  .left-view > .left-view-content > h1 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+
+  .left-view > .left-view-content > h2 {
+    font-size: 30px;
+  }
+
+  .left-view > .left-view-content > p {
+    line-height: 1.7;
+  }
+  .left-view > .left-view-content > button {
+    font-size: 14px;
+  }
+  .right-view img {
+    width: 55vw;
+  }
 }

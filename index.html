@@ -12,27 +12,38 @@
       rel="stylesheet"
     />
 
-
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <nav>
       <div class="logo-section">Logo</div>
-
       <ul class="menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
-
       <div class="user-section">
         <div class="user-wrapper">Username</div>
+        <label class="hamburger-container" for="menu-toggle">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </label>
+        <input type="checkbox" id="menu-toggle" class="toggler-checkbox" />
+        <div class="sidebar">
+          <label for="menu-toggle" class="close-btn">&times;</label>
+          <ul class="sidebar-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-
-    <section class="hero-section">
+    <div class="hero-section">
       <div class="left-view">
         <div class="left-view-content">
           <h1>
@@ -40,20 +51,17 @@
             Clothes with Expert
           </h1>
           <h2>Laundry Services!</h2>
-
           <p>
             Laundry service provides professional washing, drying and ironing of
             clothes to keep them clean and fresh. It saves time and effort by
             taking care of your daily clothing care needs efficiently.
           </p>
-
           <button>Book a service today!</button>
         </div>
       </div>
-
       <div class="right-view">
-        <img src="./image.png" alt="Laundry Image" class="hero-image"/>
+        <img src="./image.png" alt="Laundry Image" class="hero-image" />
       </div>
-    </section>
+    </div>
   </body>
 </html>

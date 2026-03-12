@@ -4,14 +4,7 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
-:root {
-  --logo-color: rgb(60, 60, 60);
-  --btn-backgroun-one: rgb(203, 237, 255);
-  --text-color-one: rgb(53, 96, 222);
-  --text-color-two: rgb(55, 131, 244);
-  --secondary-color: rgb(48, 165, 255);
-  --bg-color: rgb(251, 251, 251);
-}
+
 nav {
   display: flex;
   height: 80px;
@@ -22,7 +15,7 @@ nav {
 .logo-section {
   font-size: 28px;
   font-weight: 600;
-  color: var(--logo-color);
+  color: rgb(60, 60, 60);
 }
 .menu {
   list-style: none;
@@ -34,7 +27,7 @@ nav {
 .menu > li > a {
   text-decoration: none;
   font-weight: 600;
-  color: var(--logo-color);
+  color: rgb(60, 60, 60);
   font-size: 18px;
 }
 .menu > li > a:hover {
@@ -49,9 +42,9 @@ nav {
 }
 .user-wrapper {
   padding: 10px 20px;
-  background-color: var(--btn-backgroun-one);
+  background-color: rgb(203, 237, 255);
   border-radius: 10px;
-  color: var(--text-color-one);
+  color: rgb(53, 96, 222);
   font-weight: 500;
   cursor: pointer;
   transition: 0.5s all ease;
@@ -59,17 +52,49 @@ nav {
 .user-wrapper:hover {
   transform: scale(1.1);
 }
+.hamburger-container {
+  display: none;
+  flex-direction: column; /* Stacks the lines vertically */
+  justify-content: space-between;
+  width: 30px;
+  height: 21px; /* Total height of the icon */
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.line {
+  width: 100%;
+  height: 3px; /* Thickness of each line */
+  background-color: #333; /* Use your --logo-color variable here! */
+  border-radius: 5px;
+  transition: 0.3s; /* Makes hover effects smooth */
+}
+.toggler-checkbox {
+  display: none;
+}
+.toggler-checkbox:checked ~ .sidebar {
+  transform: translateX(0)
+}
+.close-btn {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  align-self: flex-start; /* Puts it in the top right corner */
+  padding: 20px;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: rgb(48, 165, 255);
+}
 .hero-section {
-  /* border: 1px solid black; */
   height: calc(100vh - 80px);
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  background-color: var(--bg-color);
+  background-color: rgb(251, 251, 251);
 }
 .left-view,
 .right-view {
-  /* border: 1px solid black; */
   width: 100%;
   display: flex;
   justify-content: right;
@@ -77,7 +102,6 @@ nav {
   position: relative;
 }
 .left-view-content {
-  /* border: 1px solid black; */
   height: 100%;
   width: 85%;
   padding: 50px;
@@ -92,7 +116,7 @@ nav {
 }
 .left-view-content > h2 {
   font-size: 38px;
-  color: var(--secondary-color);
+  color: rgb(48, 165, 255);
   margin-bottom: 5px;
 }
 .left-view-content > p {
@@ -127,11 +151,39 @@ nav {
   transform: scaleX(-1);
   margin-left: -40px;
 }
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 60vw;
+  background-color: #333;
+  z-index: 4;
+  display: flex;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+.sidebar-menu {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+}
+.sidebar-menu > li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+.sidebar-menu > li > a {
+  color: #fff;
+  text-decoration: none;
+}
 
-/* media quary for width <= 1024px or max-width: 1024px */
-/* @media (width <= 1024px) {
-  
-} */
+/* for small laptops */
+
 @media (max-width: 1024px) {
   .left-view-content {
     width: 100%;
@@ -153,10 +205,7 @@ nav {
 }
 
 /* for tablet */
-/* media quary for width <= 768px or max-width: 768px */
-/* @media (width <= 768px) {
-  
-} */
+
 @media (max-width: 768px) {
   .left-view-content {
     width: 100%;
@@ -168,7 +217,7 @@ nav {
     font-size: 28px;
   }
   .left-view-content > p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
   }
   .left-view-content > button {
@@ -237,5 +286,8 @@ nav {
     height: 90%;
     margin-top: -50px;
     margin-left: 20px;
+  }
+  .hamburger-container {
+    display: flex;
   }
 }

@@ -133,19 +133,22 @@ nav {
   
 } */
 @media (max-width: 1024px) {
+  .left-view-content {
+    width: 100%;
+  }
   .left-view-content > h1 {
-    font-size: 30px;
+    font-size: 42px;
   }
   .left-view-content > h2 {
-    font-size: 26px;
+    font-size: 36px;
   }
   .left-view-content > p {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 22px;
+    line-height: 26px;
   }
   .hero-image {
-    height: 70%;
-    width: 70%;
+    height: 60%;
+    width: 90%;
   }
 }
 
@@ -155,20 +158,23 @@ nav {
   
 } */
 @media (max-width: 768px) {
+  .left-view-content {
+    width: 100%;
+  }
   .left-view-content > h1 {
-    font-size: 26px;
+    font-size: 36px;
   }
   .left-view-content > h2 {
-    font-size: 22px;
+    font-size: 28px;
   }
   .left-view-content > p {
-    font-size: 8px;
-    line-height: 12px;
+    font-size: 18px;
+    line-height: 20px;
   }
   .left-view-content > button {
     width: 250px;
     height: 50px;
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 10px;
   }
   .menu > li > a {
@@ -184,16 +190,26 @@ nav {
 }
 
 /* for Mobile */
-/* media quary for width <= 480px or max-width: 480px */
-/* @media (width <= 480px) {
-  
-} */
+
 @media (max-width: 480px) {
   .nav {
     padding: 0 20px;
   }
   .menu {
     display: none;
+  }
+  .left-view-content {
+    width: 100%;
+  }
+  .left-view-content > h1 {
+    font-size: 30px;
+  }
+  .left-view-content > h2 {
+    font-size: 24px;
+  }
+  .left-view-content > p {
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .hero-section {

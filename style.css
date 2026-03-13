@@ -177,10 +177,9 @@ nav {
   text-decoration: none;
 }
 
-nav:focus-within + .sidebar {
+.hamburger-container:focus + .sidebar {
   right: 0;
 }
-
 
 /* Rotate the top line */
 .hamburger-container:focus .line:nth-child(1) {

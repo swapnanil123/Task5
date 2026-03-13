@@ -5,7 +5,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 nav {
+  position: relative;
   display: flex;
   height: 80px;
   justify-content: space-between;
@@ -31,7 +36,7 @@ nav {
   font-size: 18px;
 }
 .menu > li > a:hover {
-  color: var(--text-color-two);
+  color: blue;
 }
 .user-section {
   height: 100%;
@@ -118,6 +123,11 @@ nav {
   transform: scaleX(-1);
   margin-left: -40px;
 }
+/* .sidebar-toggler-section {
+} */
+.menu-checkbox {
+  display: none;
+}
 .hamburger-container {
   display: none;
   flex-direction: column;
@@ -126,6 +136,9 @@ nav {
   height: 21px;
   cursor: pointer;
   margin-left: 15px;
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 .line {
   width: 100%;
@@ -136,16 +149,23 @@ nav {
 }
 .sidebar {
   position: absolute;
-  top: 0;
+  top: 80px;
   right: 0;
-  height: 100vh;
-  width: 60vw;
+  height: calc(100vh - 80px);
+  width: 250px;
   background-color: #333;
   z-index: 4;
   display: none;
-  transform: translateX(100%);
-  transition: transform 0.4s ease-in-out;
-  outline: none;
+}
+.sidebar::before {
+  content: "";
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 .sidebar-menu {
   color: #fff;
@@ -165,9 +185,21 @@ nav {
   color: #fff;
   text-decoration: none;
 }
-.hamburger-container:focus + .sidebar {
+.menu-checkbox:checked ~ .sidebar {
   display: flex;
-  transform: translateX(0);
+}
+
+/* Rotate the top line */
+.menu-checkbox:checked + .hamburger-container .line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-checkbox:checked + .hamburger-container .line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-checkbox:checked + .hamburger-container .line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* for small laptops */
@@ -195,6 +227,9 @@ nav {
 /* for tablet */
 
 @media (max-width: 768px) {
+  .logo-section {
+    font-size: 20px;
+  }
   .left-view-content {
     width: 100%;
   }
@@ -215,7 +250,7 @@ nav {
     border-radius: 10px;
   }
   .menu > li > a {
-    font-size: 8px;
+    font-size: 14px;
   }
   .user-wrapper {
     padding: 9px 15px;

@@ -22,6 +22,6 @@ I used a Desktop-First approach and then "broke" the design at specific widths t
 480px (Mobile): At this stage, the side-by-side layout just didn't work. I used flex-direction: column to stack the text on top of the image so the user doesn't have to zoom in to read the description.
 
 What I Learned
-The biggest takeaway for me was learning how to balance font sizes across different screen sizes. It’s one thing to make a site "fit" on a phone, but it's another thing to make it actually usable and readable. I also practiced using CSS variables (:root) to make it easier to change the color scheme (like the "main-blue" and "bg-color") in one place instead of hunting through 200 lines of code. I also learned that the Sibling Selector (~) in CSS is really sensitive—the checkbox has to come before the sidebar in the HTML or it won't work.
+The biggest takeaway for me was learning how to balance font sizes across different screen sizes. It’s one thing to make a site "fit" on a phone, but it's another thing to make it actually usable and readable. I also practiced using CSS variables (:root) to make it easier to change the color scheme (like the "main-blue" and "bg-color") in one place instead of hunting through 200 lines of code. I also learned that the Sibling Selector (+) in CSS is really sensitive—the checkbox has to come before the sidebar in the HTML or it won't work.
 
 This is the Live Host Link: https://task5-three-beta.vercel.app/

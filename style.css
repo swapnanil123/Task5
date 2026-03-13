@@ -120,9 +120,13 @@ nav {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  margin-top: 20px;
+  transition: 1s all ease;
 }
 .left-view-content > button:hover {
   opacity: 90%;
+  transform: scale(1.2) rotateZ(-5deg);
+  transition: 1s all ease;
 }
 .right-view {
   display: flex;

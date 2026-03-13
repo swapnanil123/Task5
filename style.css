@@ -123,9 +123,6 @@ nav {
   transform: scaleX(-1);
   margin-left: -40px;
 }
-.menu-checkbox {
-  display: none;
-}
 .hamburger-container {
   display: none;
   flex-direction: column;
@@ -147,15 +144,15 @@ nav {
   transition: 0.3s;
 }
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: -250px;
+  right: 0;
   height: 100vh;
   width: 250px;
   background-color: #333;
   z-index: 4;
-  display: flex;
-  transition: 0.3s ease;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 }
 
 .sidebar-menu {
@@ -178,7 +175,8 @@ nav {
 }
 
 .hamburger-container:focus + .sidebar {
-  right: 0;
+  transform: translateX(0);
+  display: flex;
 }
 
 /* Rotate the top line */

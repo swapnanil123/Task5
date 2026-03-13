@@ -7,8 +7,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -18,31 +19,33 @@
   <body>
     <nav>
       <div class="logo-section">Logo</div>
+
       <ul class="menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
+
       <div class="user-section">
         <div class="user-wrapper">Username</div>
-        <label class="hamburger-container" for="menu-toggle">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </label>
-        <input type="checkbox" id="menu-toggle" class="toggler-checkbox" />
-        <div class="sidebar">
-          <label for="menu-toggle" class="close-btn">&times;</label>
-          <ul class="sidebar-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
+      </div>
+      <button class="hamburger-container" aria-label="Toggle menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <div class="sidebar">
+        <ul class="sidebar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </div>
     </nav>
+
     <div class="hero-section">
       <div class="left-view">
         <div class="left-view-content">
@@ -50,18 +53,23 @@
             Revitalize Your <br />
             Clothes with Expert
           </h1>
+
           <h2>Laundry Services!</h2>
+
           <p>
             Laundry service provides professional washing, drying and ironing of
             clothes to keep them clean and fresh. It saves time and effort by
             taking care of your daily clothing care needs efficiently.
           </p>
+
           <button>Book a service today!</button>
         </div>
       </div>
+
       <div class="right-view">
         <img src="./image.png" alt="Laundry Image" class="hero-image" />
       </div>
     </div>
   </body>
 </html>
+```

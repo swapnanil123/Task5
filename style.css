@@ -138,10 +138,7 @@ nav {
   width: 80%;
   /* transform: scaleX(-1); */
   margin-left: -40px;
-  animation-name: squeezedImage;
-  animation-duration: 2s;
-  animation-delay: 0.5s;
-  animation-iteration-count: infinite;
+  animation: orbitRotation 3s ease-in-out infinite;
 }
 .hamburger-container {
   display: none;
@@ -210,27 +207,30 @@ nav {
 }
 
 /* hero section image animation */
+@keyframes orbitRotation {
 
-@keyframes squeezedImage {
   0% {
-    transform: translate(0, 0);
+    transform: rotate(0deg) translateX(60px) rotate(0deg) scale(1,1);
   }
 
-  25% {
-    transform: translate(30px, 0);
+  45% {
+    transform: rotate(180deg) translateX(60px) rotate(-180deg) scale(1,1);
   }
 
+  /* squeeze moment */
   50% {
-    transform: translate(30px, 30px); /* squeeze here */
+    transform: rotate(180deg) translateX(60px) rotate(-180deg) scale(0.7,1.1);
   }
 
-  75% {
-    transform: translate(0, 30px)  scale(0.8, 1.1);
+  /* pause while squeezed */
+  55% {
+    transform: rotate(180deg) translateX(60px) rotate(-180deg) scale(1,1);
   }
 
   100% {
-    transform: translate(0, 0);
+    transform: rotate(360deg) translateX(60px) rotate(-360deg) scale(1,1);
   }
+
 }
 
 /* for small laptops */

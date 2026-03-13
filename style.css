@@ -147,26 +147,17 @@ nav {
   transition: 0.3s;
 }
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 80px;
-  right: 0;
+  right: -250px;
   height: calc(100vh - 80px);
   width: 250px;
   background-color: #333;
   z-index: 4;
-  display: none;
-  pointer-events: auto;
+  display: flex;
+  transition: 0.3s ease;
 }
-.sidebar::before {
-  content: "";
-  position: fixed;
-  top: 80px;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
+
 .sidebar-menu {
   color: #fff;
   height: 100%;
@@ -185,15 +176,11 @@ nav {
   color: #fff;
   text-decoration: none;
 }
-.hamburger-container:focus {
-  pointer-events: none;
+
+nav:focus-within + .sidebar {
+  right: 0;
 }
-.hamburger-container:focus .sidebar {
-  display: flex;
-}
-.sidebar-toggler-section:focus-within .sidebar {
-  display: flex;
-}
+
 
 /* Rotate the top line */
 .hamburger-container:focus .line:nth-child(1) {
@@ -270,7 +257,7 @@ nav {
 /* for Mobile */
 
 @media (max-width: 480px) {
-  .nav {
+  nav {
     padding: 0 20px;
   }
   .menu {

@@ -148,9 +148,6 @@ nav {
   animation:
     orbite 3s ease-in-out infinite;
 }
-#menu-toggle {
-  display: none;
-}
 
 .hamburger-container {
   display: none;
@@ -169,7 +166,7 @@ nav {
   background-color: #333;
   border-radius: 5px;
 }
-#menu-toggle:checked ~ .sidebar {
+.hamburger-container:focus + .sidebar {
   display: flex;
 }
 .close-btn {

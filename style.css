@@ -145,8 +145,7 @@ nav {
 .hero-image {
   height: 80%;
   width: 85%;
-  animation:
-    orbite 3s ease-in-out infinite;
+  animation: orbite 3s ease-in-out infinite;
 }
 
 .hamburger-container {
@@ -209,7 +208,6 @@ nav {
   color: #fff;
   text-decoration: none;
 }
-
 
 /* for small laptops */
 
